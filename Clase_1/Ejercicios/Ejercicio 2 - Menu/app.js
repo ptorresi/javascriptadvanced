@@ -40,11 +40,22 @@ window.onhashchange = function(){
   let vistaElegida = location.hash;
 
   // 7) En esta linea todas las vistas deben ocultarse
+  viewHome.className = 'hidden';
+  viewServices.className='hidden';
+  viewAbout.className='hidden';
+  viewContact.className='hidden';
 
   // 8) captura el section perteneciente a la vista elegida
+  let nombreVista = vistaElegida.split('#');
+  nombreVista = nombreVista[1];
+  let sectionCapturada = document.getElementById(nombreVista);
+
   // 9) desocultar el section capturado en el punto anterior
 
+  sectionCapturada.className = 'view';
   // 10) debes ocultar el modal y el overlay.
+  
+  CerrarModal();
 }
 
 /* -----------------------------------------------------------------
