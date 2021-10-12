@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Captura DOM</title>
+	<style>
+		body{
+			font-size: 30px;
+		}
+		span{
+			font-size: 14px;
+			color: gray;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<img src="code.png" alt="code" width="600">
+	<table border="1">
+		<tr>
+			<th>Selector css</th>
+			<th>qué captura</th>
+			<th>querySelector</th>
+			<th>querySelectorAll</th>
+		</tr>
+		<tr>
+			<td>p<span>(existen 3)</span></td>
+			<td>p, p, p</td>
+			<td>obj representa 1er p</td>
+			<td>[obj,obj,obj]</td>
+		</tr>
+		<tr>
+			<td>a<span>(no existen)</span></td>
+			<td>nada</td>
+			<td>null</td>
+			<td>[]</td>
+		</tr>
+		<tr>
+			<td>h1<span>(existe 1)</span></td>
+			<td>h1</td>
+			<td>obj que representa h1</td>
+			<td>[obj]</td>
+		</tr>
+	</table>
+
+</body>
+</html>
